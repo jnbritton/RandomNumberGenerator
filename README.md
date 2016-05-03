@@ -16,20 +16,20 @@ The first part of the code generates an array of normally distributed pseudo-ran
        a <- 0.8
      
      # generate 10x10 correlation matrix
-     M <- c(1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, 
+       M <- c(1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, 
        a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a,
        a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, 
        a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0)
-     dim(M) <- c(10, 10)
+       dim(M) <- c(10, 10)
 
 The next section of the code normalizes the correlation matrix to the uniform distribution on the open interval (0,1):
 
      # adjust correlations for uniform distribution
-     for (i in 1:10){
-     for (j in max(i, 1):10){
+       for (i in 1:10){
+        for (j in max(i, 1):10){
          if (i != j){
-             M[i, j] <- 2 * sin(pi * M[i, j] / 6)
-             M[j, i] <- 2 * sin(pi * M[j, i] / 6)
+           M[i, j] <- 2 * sin(pi * M[i, j] / 6)
+           M[j, i] <- 2 * sin(pi * M[j, i] / 6)
          }
        }
      }
@@ -70,7 +70,7 @@ The great thing about the cumulative density function we created from our array 
        b<-ifelse (x>=0.931 & x<=1, -9,b)
        b}
          
-        Z<- apply(Y,2,GP)
+       Z<- apply(Y,2,GP)
        
      # plot GPA histograms
        par(mfrow = c(2, 5))
