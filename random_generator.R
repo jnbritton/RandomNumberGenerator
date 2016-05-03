@@ -6,7 +6,10 @@ cor(X)
 a<-0.8
 
 # generate 10x10 correlation matrix
-M <- c(1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0)
+M <- c(1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, 
+a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a,
+a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, 
+a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0, a, a, a, a, a, a, a, a, a, a, 1.0)
 dim(M) <- c(10, 10)
 
 # adjust correlations for uniform distribution
